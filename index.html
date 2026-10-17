@@ -696,18 +696,3 @@ $('stk').classList.add('show');
 </script>
 </body>
 </html>
-```
-
-### 🕵️‍♂️ Cara Membaca Hasil Debug (Sangat Penting):
-1. Simpan file HTML ini dan hosting ulang (atau buka via Live Server/Netlify).
-2. Buka halaman web Anda di browser.
-3. Tekan **F12** (atau klik kanan > Inspect) untuk membuka **Developer Tools**.
-4. Pilih tab **Console**.
-5. Isi form kalkulator dan klik "Lihat laporan saya".
-
-Lihat apa yang muncul di Console. 
-- Jika muncul **🔴 RAW APPS SCRIPT RESPONSE: `<html>...<title>Google</title>...`**, berarti deployment Apps Script Anda belum di-set ke **Anyone** (Publik).
-- Jika muncul **🟢 PARSED JSON: `{status: "error", message: "Akses ditolak."}`**, berarti `APP_KEY` tidak cocok.
-- Jika muncul **🟢 PARSED JSON: `{status: "rate_limited"...}`**, berarti nomor WA Anda terkena batas harian (karena test berulang).
-
-Silakan dicoba dan beri tahu saya apa yang tertulis di tab **Console** browser Anda! 🚀
