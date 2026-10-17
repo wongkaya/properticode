@@ -394,17 +394,17 @@ footer p{margin-top:10px;line-height:1.65}
 
 <script>
 (function(){
-/* ====== KONFIGURASI: ubah sebelum dipakai ====== */
+/* ====== KONFIGURASI: SUDAH DISINKRONISASI DENGAN BACKEND ====== */
 var CONFIG = {
-  API_URL: 'GANTI_DENGAN_URL_APPS_SCRIPT_/exec',
-  AGENT_NAME: 'Nama Agen',
+  API_URL: 'https://script.google.com/macros/s/AKfycbyftmqdfVOhSKRzvvkGJmO-Fe_VQdAMSB_aIhPolqfuIFFWqaJ3bjJio6bhsw18vbRbLA/exec',
+  APP_KEY: 'PropertyCode_JwWG02jf6RIgwPTkBAva', // Kunci Rahasia disuntikkan agar tidak ditolak server
+  AGENT_NAME: 'Azrul',
   AGENT_TITLE: 'Konsultan Properti',
-  AGENT_WA: '6281234567890',          // format 62, tanpa + dan tanpa 0 di depan
+  AGENT_WA: '628113189090',          // format 62, tanpa + dan tanpa 0 di depan
   AGENT_PHOTO: 'foto-agen.jpg',       // file foto di folder yang sama, atau URL gambar
   AGENT_BIO: 'Membantu keluarga menemukan rumah dan KPR yang sesuai kemampuan.',
   AGENT_FACTS: [],                    // isi hanya fakta nyata, contoh: ['8 tahun pengalaman']
   AGENT_LICENSE: '',
-  // Isi HANYA dengan testimoni asli dan atas izin klien. Kosongkan array ([]) untuk menyembunyikan bagian ini.
   TESTIMONIALS: [
     { text: 'Awalnya bingung mau beli rumah harga 400jt kuat apa nggak. Pas nyoba kalkulator ini baru paham batasan aman cicilanku. Makasih udah dibantu cari unit yang pas!', name: 'Nama Klien', info: 'Pembeli rumah pertama' }
   ]
@@ -496,16 +496,30 @@ function show(n) {
   if (n <= TOTAL) { $('ql').textContent = 'Langkah ' + n + ' dari ' + TOTAL; $('qn').textContent = LBL[n - 1]; $('pbf').style.width = (n / TOTAL * 100) + '%'; }
 }
 function collect() {
-  return { name: $('name').value.trim(), phone: $('phone').value.trim(), city: $('city').value.trim(), goal: checked('goal'),
-    income: digits($('income').value), debt: digits($('debt').value), dp: digits($('dp').value), years: Number(checked('years')),
-    rate: Number(String($('rate').value).replace(',', '.')), when: checked('when'), consent: $('consent').checked, website: $('website').value };
+  return { 
+    action: "save_data",
+    nama: $('name').value.trim(), 
+    wa: $('phone').value.trim(), 
+    city: $('city').value.trim(), 
+    goal: checked('goal'),
+    income: digits($('income').value), 
+    debt: digits($('debt').value), 
+    dp: digits($('dp').value), 
+    years: Number(checked('years')),
+    rate: Number(String($('rate').value).replace(',', '.')), 
+    when: checked('when'), 
+    consent: $('consent').checked, 
+    website: $('website').value,
+    k: CONFIG.APP_KEY, // APP_KEY disuntikkan
+    ref: "Website_KPR"
+  };
 }
 function validate(n, d) {
   if (n === 1 && d.income < 1000000) return 'Isi penghasilan bulanan, minimal Rp 1.000.000.';
   if (n === 2 && !(d.rate >= 3 && d.rate <= 20)) return 'Bunga harus antara 3 dan 20 persen.';
   if (n === 4) {
-    if (d.name.length < 2) return 'Isi nama Anda.';
-    if (!/^(\+?62|0)8\d{7,12}$/.test(d.phone.replace(/[\s-]/g, ''))) return 'Nomor WhatsApp belum benar. Contoh: 08123456789';
+    if (d.nama.length < 2) return 'Isi nama Anda.';
+    if (!/^(\+?62|0)8\d{7,12}$/.test(d.wa.replace(/[\s-]/g, ''))) return 'Nomor WhatsApp belum benar. Contoh: 08123456789';
     if (!d.consent) return 'Centang persetujuan agar agen boleh menghubungi Anda.';
   }
   return '';
@@ -555,7 +569,7 @@ function render(d, r) {
   var score = Math.round(0.4 * s1 + 0.4 * s2 + 0.2 * s3);
   var lv = level(score);
 
-  $('resTitle').textContent = 'Perkiraan untuk ' + d.name;
+  $('resTitle').textContent = 'Perkiraan untuk ' + d.nama;
   $('resMeta').textContent = new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }) + (d.city ? ' · ' + d.city : '') + ' · ' + d.goal;
   $('gNum').textContent = score;
   $('gArc').style.strokeDashoffset = 213.6 * (1 - score / 100);
@@ -584,7 +598,7 @@ function render(d, r) {
   $('notes').textContent = '';
   notes.forEach(function (t) { var li = document.createElement('li'); if (t[1]) li.className = 'ok'; li.textContent = t[0]; $('notes').appendChild(li); });
 
-  var msg = 'Halo ' + CONFIG.AGENT_NAME + ', saya ' + d.name + '. Saya baru memakai kalkulator KPR Anda.\n' +
+  var msg = 'Halo ' + CONFIG.AGENT_NAME + ', saya ' + d.nama + '. Saya baru memakai kalkulator KPR Anda.\n' +
     'Profil: ' + lv[0] + ' (skor ' + score + ')\nPenghasilan: ' + rupiah(d.income) + '/bulan\nCicilan lain: ' + rupiah(d.debt) + '/bulan\nDP: ' + rupiah(d.dp) + '\n' +
     'Hasil: harga aman sekitar ' + ringkas(r.hargaAman) + ', cicilan aman ' + rupiah(r.cicilanAman) + '/bulan (' + d.years + ' tahun, ' + d.rate + '%).\n' +
     (d.city ? 'Area diincar: ' + d.city + '\n' : '') + 'Mohon dibantu mencarikan properti yang sesuai dengan budget saya (sampai sekitar ' + (ok ? ringkas(r.hargaMaks) : 'budget di atas') + ').';
@@ -598,12 +612,50 @@ function render(d, r) {
 function save(data) {
   var st = $('saveStatus');
   if (CONFIG.API_URL.indexOf('GANTI_') === 0) { st.textContent = 'Mode demo: belum tersambung ke Google Sheets.'; return; }
-  st.textContent = 'Menyimpan data...';
+  st.textContent = 'Menyimpan data dan membuat laporan AI...';
   fetch(CONFIG.API_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(data) })
     .then(function (r) { return r.json(); })
-    .then(function (j) { st.textContent = j.ok ? 'Data tersimpan. Agen akan menghubungi Anda.' : (j.error || 'Data belum tersimpan.'); })
+    .then(function (j) { 
+      if (j.status === "saved" || j.status === "triggered" || j.status === "already_sent" || j.status === "rate_limited") {
+        st.textContent = j.message || 'Data tersimpan. Silakan klik tombol WhatsApp di bawah.'; 
+      } else {
+        st.textContent = j.message || 'Data belum tersimpan. Silakan coba lagi.'; 
+      }
+    })
     .catch(function () { st.textContent = 'Koneksi bermasalah. Anda tetap bisa lanjut lewat tombol WhatsApp.'; });
 }
+
+// Trigger Tahap 2: Kirim Laporan via Fonnte saat user klik tombol WA
+$('waBtn').addEventListener('click', function(e) {
+  e.preventDefault(); // Cegah buka link langsung
+  var d = collect();
+  var triggerPayload = {
+    action: "trigger_send_report",
+    nama: d.nama,
+    wa: d.wa,
+    k: CONFIG.APP_KEY
+  };
+  
+  var st = $('saveStatus');
+  st.textContent = 'Mengirim laporan ke WhatsApp Anda...';
+  
+  fetch(CONFIG.API_URL, { 
+    method: 'POST', 
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' }, 
+    body: JSON.stringify(triggerPayload) 
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(j) {
+    st.textContent = j.message || 'Laporan diproses.';
+  })
+  .catch(function(err) {
+    st.textContent = 'Gagal memicu pengiriman, namun link WhatsApp tetap dibuka.';
+  })
+  .finally(function() {
+    // Buka link WhatsApp setelah trigger dikirim (atau gagal)
+    window.open($('waBtn').href, '_blank');
+  });
+});
 
 $('stk').classList.add('show');
 })();
