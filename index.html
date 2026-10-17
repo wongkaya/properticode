@@ -1,3 +1,10 @@
+Tentu, Azrul. Berikut adalah **kode HTML 100% lengkap** yang sudah saya suntikkan dengan **"Mode Debug"** (`console.log` dan pembacaan `text()` mentah). 
+
+Kode ini akan sangat membantu Anda melihat persis apa yang dibalas oleh Google Apps Script saat user mengakses web secara live (apakah ditolak, kena rate limit, atau terblokir oleh halaman login Google).
+
+Silakan **Copy** seluruh kode di bawah ini dan **Timpa (Replace)** file HTML Anda:
+
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -609,25 +616,45 @@ function render(d, r) {
   $('chs').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+// MODIFIKASI: Mode Debug (Membaca response text mentah untuk diagnosa error)
 function save(data) {
   var st = $('saveStatus');
   if (CONFIG.API_URL.indexOf('GANTI_') === 0) { st.textContent = 'Mode demo: belum tersambung ke Google Sheets.'; return; }
   st.textContent = 'Menyimpan data dan membuat laporan AI...';
-  fetch(CONFIG.API_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(data) })
-    .then(function (r) { return r.json(); })
-    .then(function (j) { 
-      if (j.status === "saved" || j.status === "triggered" || j.status === "already_sent" || j.status === "rate_limited") {
-        st.textContent = j.message || 'Data tersimpan. Silakan klik tombol WhatsApp di bawah.'; 
-      } else {
-        st.textContent = j.message || 'Data belum tersimpan. Silakan coba lagi.'; 
+  
+  fetch(CONFIG.API_URL, { 
+    method: 'POST', 
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' }, 
+    body: JSON.stringify(data),
+    redirect: 'follow' 
+  })
+  .then(function (r) { 
+    return r.text().then(function(txt) {
+      console.log('🔴 RAW APPS SCRIPT RESPONSE:', txt);
+      try {
+        return JSON.parse(txt);
+      } catch(e) {
+        throw new Error('Respon bukan JSON: ' + txt.substring(0, 100));
       }
-    })
-    .catch(function () { st.textContent = 'Koneksi bermasalah. Anda tetap bisa lanjut lewat tombol WhatsApp.'; });
+    });
+  })
+  .then(function (j) { 
+    console.log('🟢 PARSED JSON:', j);
+    if (j.status === "saved" || j.status === "triggered" || j.status === "already_sent" || j.status === "rate_limited") {
+      st.textContent = j.message || 'Data tersimpan. Silakan klik tombol WhatsApp di bawah.'; 
+    } else {
+      st.textContent = j.message || 'Data belum tersimpan. Silakan coba lagi.'; 
+    }
+  })
+  .catch(function (err) { 
+    console.error('🔴 FETCH ERROR:', err);
+    st.textContent = 'Koneksi bermasalah. Cek Console (F12) untuk detail error.'; 
+  });
 }
 
 // Trigger Tahap 2: Kirim Laporan via Fonnte saat user klik tombol WA
 $('waBtn').addEventListener('click', function(e) {
-  e.preventDefault(); // Cegah buka link langsung
+  e.preventDefault(); 
   var d = collect();
   var triggerPayload = {
     action: "trigger_send_report",
@@ -642,17 +669,24 @@ $('waBtn').addEventListener('click', function(e) {
   fetch(CONFIG.API_URL, { 
     method: 'POST', 
     headers: { 'Content-Type': 'text/plain;charset=utf-8' }, 
-    body: JSON.stringify(triggerPayload) 
+    body: JSON.stringify(triggerPayload),
+    redirect: 'follow'
   })
-  .then(function(r) { return r.json(); })
+  .then(function(r) { 
+    return r.text().then(function(txt) {
+      console.log('🔴 RAW TRIGGER RESPONSE:', txt);
+      return JSON.parse(txt);
+    });
+  })
   .then(function(j) {
+    console.log('🟢 TRIGGER JSON:', j);
     st.textContent = j.message || 'Laporan diproses.';
   })
   .catch(function(err) {
+    console.error('🔴 TRIGGER ERROR:', err);
     st.textContent = 'Gagal memicu pengiriman, namun link WhatsApp tetap dibuka.';
   })
   .finally(function() {
-    // Buka link WhatsApp setelah trigger dikirim (atau gagal)
     window.open($('waBtn').href, '_blank');
   });
 });
@@ -662,3 +696,18 @@ $('stk').classList.add('show');
 </script>
 </body>
 </html>
+```
+
+### 🕵️‍♂️ Cara Membaca Hasil Debug (Sangat Penting):
+1. Simpan file HTML ini dan hosting ulang (atau buka via Live Server/Netlify).
+2. Buka halaman web Anda di browser.
+3. Tekan **F12** (atau klik kanan > Inspect) untuk membuka **Developer Tools**.
+4. Pilih tab **Console**.
+5. Isi form kalkulator dan klik "Lihat laporan saya".
+
+Lihat apa yang muncul di Console. 
+- Jika muncul **🔴 RAW APPS SCRIPT RESPONSE: `<html>...<title>Google</title>...`**, berarti deployment Apps Script Anda belum di-set ke **Anyone** (Publik).
+- Jika muncul **🟢 PARSED JSON: `{status: "error", message: "Akses ditolak."}`**, berarti `APP_KEY` tidak cocok.
+- Jika muncul **🟢 PARSED JSON: `{status: "rate_limited"...}`**, berarti nomor WA Anda terkena batas harian (karena test berulang).
+
+Silakan dicoba dan beri tahu saya apa yang tertulis di tab **Console** browser Anda! 🚀
