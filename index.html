@@ -1,14 +1,29 @@
-<!DOCTYPE html>
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+                body {
+                  background-color: white; /* Ensure the iframe has a white background */
+                }
+
+                
+              </style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0B2A6B">
 <meta name="robots" content="noindex">
-<title>Kalkulator KPR: Harga Rumah yang Aman untuk Penghasilan Anda</title>
-<meta name="description" content="Isi 2 menit. Hasil langsung muncul dalam laporan profil KPR, lengkap dengan perkiraan cicilan.">
-<meta property="og:title" content="Berapa harga rumah yang aman untuk penghasilan Anda?">
-<meta property="og:description" content="Isi 2 menit. Hasil langsung muncul, lengkap dengan perkiraan cicilan.">
+<title>Kalkulator Properti: Batas Aman Beli Rumah Cash atau KPR</title>
+<meta name="description" content="Pilih metode cash atau KPR. Isi 2 menit dan lihat batas harga rumah yang aman sesuai kondisi keuangan Anda.">
+<meta property="og:title" content="Berapa batas aman Anda untuk beli rumah secara cash atau KPR?">
+<meta property="og:description" content="Isi 2 menit. Pilih metode pembelian, lalu lihat harga rumah yang aman sesuai kondisi keuangan Anda.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -188,28 +203,31 @@ footer p{margin-top:10px;line-height:1.65}
 .stk{position:fixed;left:max(0px,calc(50% - 240px));right:max(0px,calc(50% - 240px));bottom:0;z-index:50;padding:10px var(--gr) calc(10px + env(safe-area-inset-bottom,0px)) var(--gl);background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);transform:translateY(110%);visibility:hidden;transition:transform .3s,visibility 0s .3s}
 .stk .btn{background:var(--gold);color:var(--navy)}.stk .btn:hover{background:#E86A0A}
 .stk.show{transform:none;visibility:visible;transition-delay:0s}
+
+.insight{margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--teal-soft);font-size:13.5px;line-height:1.55;color:var(--ink2)}
+.insight strong{color:var(--navy)}
 </style>
 </head>
 <body>
-<div class="stk" id="stk"><button type="button" class="btn" id="stkBtn">Cek harga rumah aman saya, gratis</button></div>
+<div class="stk" id="stk"><button type="button" class="btn" id="stkBtn">Cek batas aman saya, gratis</button></div>
 
 <div class="shell">
 <header class="top"><span class="brand" id="brand">KPR</span></header>
 
 <section class="hero"><div class="wrap ctr">
   <span class="hook">Sebelum survei rumah, cek batas aman Anda dulu</span>
-  <h1 class="ht">Berapa harga rumah yang aman untuk penghasilan Anda?</h1>
-  <p class="lead">Isi 2 menit. Hasil langsung muncul, lengkap dengan perkiraan cicilan.</p>
+  <h1 class="ht">Berapa batas aman Anda untuk beli rumah secara cash atau KPR?</h1>
+  <p class="lead">Isi 2 menit. Pilih metode pembelian, lalu lihat harga rumah yang aman sesuai kondisi keuangan Anda.</p>
   <div class="photo" id="heroPhoto" aria-hidden="true"></div>
   <div class="who"><b id="heroName"></b><span id="heroRole"></span></div>
-  <p class="callout"><strong>Membeli rumah di luar batas kemampuan finansial adalah penyebab utama KPR macet.</strong> Hitung angka aman Anda sekarang dalam 2 menit, sebelum mulai menawar properti.</p>
+  <p class="callout"><strong>Beli rumah di luar batas aman—baik cash maupun KPR—bisa mengganggu arus kas setelah akad.</strong> Hitung angka aman Anda sekarang dalam 2 menit, sebelum mulai menawar properti.</p>
   <div class="facts"><div><b>4</b><span>langkah singkat</span></div><div><b>2</b><span>menit</span></div><div><b>Rp0</b><span>biaya</span></div></div>
 </div></section>
 
 <main>
 <section class="sec" id="hasil"><div class="wrap ctr">
   <h2 class="st">Contoh ilustrasi hasilmu</h2>
-  <p class="ss">Bukan sekadar angka. Anda mendapat skor kesiapan, cicilan, dan rekomendasi dalam satu laporan.</p>
+  <p class="ss">Bukan sekadar angka. Anda mendapat skor kesiapan, batas harga aman, dan rekomendasi. Untuk KPR menampilkan cicilan; untuk cash menampilkan dana yang perlu disisakan.</p>
   <div class="report">
     <div class="rp">
       <div class="rhead"><div><small>Laporan Profil KPR</small><h3>Perkiraan untuk Sinta</h3><p>Contoh ilustrasi, bukan data nyata</p></div>
@@ -234,9 +252,9 @@ footer p{margin-top:10px;line-height:1.65}
   <h2 class="st">Setelah 2 menit, Anda tidak perlu menebak lagi</h2>
   <p class="ss">Tanpa daftar akun, tanpa biaya.</p>
   <div class="list">
-    <div class="item"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z"/></svg></span><div><h3>Tahu batas harga sebelum survei</h3><p>Satu angka jelas, lengkap dengan batas maksimal dari penghasilan Anda. Survei hanya rumah yang masuk budget.</p></div></div>
-    <div class="item"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><div><h3>Cicilan yang tidak mencekik</h3><p>Lihat cicilan aman dan maksimal, serta berapa sisa penghasilan Anda tiap bulan.</p></div></div>
-    <div class="item"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><div><h3>Tahu apa yang perlu dibenahi</h3><p>Skor kesiapan menilai beban utang, DP, dan efisiensi bunga, lengkap dengan rekomendasi.</p></div></div>
+    <div class="item"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z"/></svg></span><div><h3>Tahu batas harga sebelum survei</h3><p>Survei hanya rumah yang masuk budget, baik untuk skema cash maupun KPR.</p></div></div>
+    <div class="item"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><div><h3>Angka yang relevan dengan metode Anda</h3><p>Untuk KPR: cicilan aman dan maksimal. Untuk cash: batas harga aman dan dana yang perlu disisakan.</p></div></div>
+    <div class="item"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><div><h3>Tahu apa yang perlu dibenahi</h3><p>Skor kesiapan menilai beban utang, DP, efisiensi bunga, atau profil keamanan dana cash.</p></div></div>
     <div class="item"><span class="ic"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></svg></span><div><h3>Dicarikan properti via WhatsApp</h3><p>Agen membantu mencarikan properti yang sesuai dengan budget Anda, langsung lewat WhatsApp.</p></div></div>
   </div>
 </div></section>
@@ -251,9 +269,9 @@ footer p{margin-top:10px;line-height:1.65}
   <h2 class="st">Cara kerjanya</h2>
   <p class="ss">Satu langkah per layar, bukan formulir panjang.</p>
   <div class="steps3">
-    <div><b class="n">1</b><b class="t">Isi keuangan</b><p>Penghasilan, cicilan, dan DP.</p></div>
-    <div><b class="n">2</b><b class="t">Atur rencana</b><p>Tenor, bunga, dan tujuan.</p></div>
-    <div><b class="n">3</b><b class="t">Terima laporan</b><p>Angka instan, konsultasi opsional.</p></div>
+    <div><b class="n">1</b><b class="t">Pilih metode & isi keuangan</b><p>Cash atau KPR, lalu isi data yang relevan.</p></div>
+    <div><b class="n">2</b><b class="t">Atur rencana pembelian</b><p>Untuk KPR: DP, tenor, bunga. Untuk cash: profil keamanan dana.</p></div>
+    <div><b class="n">3</b><b class="t">Terima laporan</b><p>Angka instan, rekomendasi, dan konsultasi opsional.</p></div>
   </div>
 </div></section>
 
@@ -271,44 +289,86 @@ footer p{margin-top:10px;line-height:1.65}
   <h2 class="st ctr">Pertanyaan yang sering muncul</h2>
   <div class="faq" style="margin-top:22px">
     <details><summary>Apakah ini sama dengan persetujuan KPR?</summary><p>Bukan. Ini perkiraan awal. Persetujuan tetap ditentukan bank setelah memeriksa slip gaji, riwayat kredit, dan dokumen lain.</p></details>
-    <details><summary>Bagaimana angkanya dihitung?</summary><p>Cicilan aman dipatok 30% dari penghasilan, dikurangi cicilan lain. Dari cicilan itu dihitung plafon pinjaman dengan rumus anuitas sesuai tenor dan bunga, lalu ditambah DP. Batas maksimal memakai 35%.</p></details>
+    <details><summary>Bagaimana jika saya beli cash?</summary><p>Alur akan menyesuaikan. Anda tidak perlu mengisi DP, tenor, atau bunga. Kami menghitung batas harga aman berdasarkan dana tunai yang siap dipakai dan profil keamanan dana yang Anda pilih.</p></details>
+    <details><summary>Bagaimana angkanya dihitung?</summary><p>Untuk KPR, cicilan aman dipatok 30% dari penghasilan, dikurangi cicilan lain. Dari cicilan itu dihitung plafon pinjaman dengan rumus anuitas sesuai tenor dan bunga, lalu ditambah DP. Untuk cash, batas harga aman dihitung dari dana siap pakai dikurangi persentase yang disarankan disisakan sesuai profil keamanan.</p></details>
     <details><summary>Apakah bunga 8% sudah pasti?</summary><p>Tidak. Itu asumsi awal. Bunga tiap bank berbeda dan dapat naik setelah masa promo. Ubah angkanya di langkah 2 untuk melihat bedanya.</p></details>
     <details><summary>Untuk apa nomor WhatsApp saya?</summary><p>Agen memakainya untuk menghubungi Anda terkait hasil ini dan pilihan rumah yang sesuai. Anda tidak wajib membalas.</p></details>
   </div>
 </div></section>
-<section class="banner"><div class="wrap"><h2>Jangan biarkan rumah impian berujung <span>cicilan yang menyesakkan</span></h2><p>Cek angkanya sekarang, lalu survei dengan tenang.</p></div></section>
+<section class="banner"><div class="wrap"><h2>Jangan biarkan rumah impian berujung <span>penyesalan setelah akad</span></h2><p>Cek angkanya sekarang, lalu survei dengan tenang.</p></div></section>
 </main>
 
-<section class="chs" id="chs" hidden aria-label="Kalkulator KPR"><div id="stage" aria-live="polite">
-  <div class="chh"><h2>Kalkulator KPR</h2><button type="button" class="cx" id="cx" aria-label="Tutup kalkulator">&#10005;</button></div>
+<section class="chs" id="chs" hidden aria-label="Kalkulator properti cash dan KPR"><div id="stage" aria-live="polite">
+  <div class="chh"><h2>Kalkulator Properti</h2><button type="button" class="cx" id="cx" aria-label="Tutup kalkulator">&#10005;</button></div>
   <div id="prog"><div class="qh"><span id="ql">Langkah 1 dari 4</span><span id="qn">Keuangan</span></div><div class="pb"><i id="pbf" style="width:25%"></i></div></div>
 
   <div class="step" data-s="1">
-    <h3 class="stq">Berapa penghasilan dan cicilan Anda?</h3>
-    <p class="p2">Dipakai untuk menghitung cicilan yang masih nyaman tiap bulan.</p>
-    <label class="lb" for="income">Penghasilan bulanan <small>(gabungan jika suami-istri)</small></label>
-    <div class="mf"><span>Rp</span><input id="income" class="field m" type="text" inputmode="numeric" placeholder="10.000.000" autocomplete="off"></div>
-    <label class="lb" for="debt">Cicilan lain per bulan <small>(KTA, kartu kredit, kendaraan. Isi 0 jika tidak ada)</small></label>
-    <div class="mf"><span>Rp</span><input id="debt" class="field m" type="text" inputmode="numeric" placeholder="0" autocomplete="off"></div>
+    <h3 class="stq" id="s1Title">Berapa penghasilan dan cicilan Anda?</h3>
+    <p class="p2" id="s1Sub">Dipakai untuk menghitung cicilan yang masih nyaman tiap bulan.</p>
+
+    <span class="lb" id="methodT">Metode pembelian</span>
+    <div class="rr" role="radiogroup" aria-labelledby="methodT">
+      <label><input type="radio" name="method" value="kpr" checked>Kredit / KPR</label>
+      <label><input type="radio" name="method" value="cash">Cash / Tunai</label>
+    </div>
+
+    <div id="kprFields">
+      <label class="lb" for="income">Penghasilan bulanan <small>(gabungan jika suami-istri)</small></label>
+      <div class="mf"><span>Rp</span><input id="income" class="field m" type="text" inputmode="numeric" placeholder="10.000.000" autocomplete="off"></div>
+      <label class="lb" for="debt">Cicilan lain per bulan <small>(KTA, kartu kredit, kendaraan. Isi 0 jika tidak ada)</small></label>
+      <div class="mf"><span>Rp</span><input id="debt" class="field m" type="text" inputmode="numeric" placeholder="0" autocomplete="off"></div>
+    </div>
+
+    <div id="cashFields" hidden>
+      <label class="lb" for="cashFunds">Dana tunai yang siap pakai</label>
+      <div class="mf"><span>Rp</span><input id="cashFunds" class="field m" type="text" inputmode="numeric" placeholder="800.000.000" autocomplete="off"></div>
+      <p class="p2">Masukkan dana yang benar-benar liquid: tabungan, deposito yang bisa cair, hasil penjualan aset, atau dana yang sudah pasti tersedia. Jangan masukkan aset yang masih harus dijual dulu.</p>
+
+      <label class="lb" for="cashIncome">Penghasilan bulanan <small>(opsional)</small></label>
+      <div class="mf"><span>Rp</span><input id="cashIncome" class="field m" type="text" inputmode="numeric" placeholder="20.000.000" autocomplete="off"></div>
+
+      <label class="lb" for="cashDebt">Kewajiban bulanan lain <small>(opsional)</small></label>
+      <div class="mf"><span>Rp</span><input id="cashDebt" class="field m" type="text" inputmode="numeric" placeholder="0" autocomplete="off"></div>
+      <p class="p2">Opsional, tapi membantu agen memahami profil keuangan Anda secara lebih utuh.</p>
+    </div>
+
     <div class="err" role="alert"></div>
     <button type="button" class="btn" data-next>Lanjut</button>
   </div>
 
   <div class="step" data-s="2" hidden>
-    <h3 class="stq">DP dan tenor yang direncanakan</h3>
-    <p class="p2">Bunga adalah asumsi awal. Ubah untuk membandingkan.</p>
-    <label class="lb" for="dp">Dana DP yang sudah ada <small>(isi 0 jika belum ada)</small></label>
-    <div class="mf"><span>Rp</span><input id="dp" class="field m" type="text" inputmode="numeric" placeholder="50.000.000" autocomplete="off"></div>
-    <span class="lb" id="tenorT">Tenor (tahun)</span>
-    <div class="rr c5" role="radiogroup" aria-labelledby="tenorT">
-      <label><input type="radio" name="years" value="10"><span>10<br><small>thn</small></span></label>
-      <label><input type="radio" name="years" value="15"><span>15<br><small>thn</small></span></label>
-      <label><input type="radio" name="years" value="20" checked><span>20<br><small>thn</small></span></label>
-      <label><input type="radio" name="years" value="25"><span>25<br><small>thn</small></span></label>
-      <label><input type="radio" name="years" value="30"><span>30<br><small>thn</small></span></label>
+    <h3 class="stq" id="s2Title">DP dan tenor yang direncanakan</h3>
+    <p class="p2" id="s2Sub">Bunga adalah asumsi awal. Ubah untuk membandingkan.</p>
+
+    <div id="kprPlan">
+      <label class="lb" for="dp">Dana DP yang sudah ada <small>(isi 0 jika belum ada)</small></label>
+      <div class="mf"><span>Rp</span><input id="dp" class="field m" type="text" inputmode="numeric" placeholder="50.000.000" autocomplete="off"></div>
+      <span class="lb" id="tenorT">Tenor (tahun)</span>
+      <div class="rr c5" role="radiogroup" aria-labelledby="tenorT">
+        <label><input type="radio" name="years" value="10"><span>10<br><small>thn</small></span></label>
+        <label><input type="radio" name="years" value="15"><span>15<br><small>thn</small></span></label>
+        <label><input type="radio" name="years" value="20" checked><span>20<br><small>thn</small></span></label>
+        <label><input type="radio" name="years" value="25"><span>25<br><small>thn</small></span></label>
+        <label><input type="radio" name="years" value="30"><span>30<br><small>thn</small></span></label>
+      </div>
+      <label class="lb" for="rate">Bunga per tahun (%)</label>
+      <input id="rate" class="field" type="text" inputmode="decimal" value="8" autocomplete="off">
     </div>
-    <label class="lb" for="rate">Bunga per tahun (%)</label>
-    <input id="rate" class="field" type="text" inputmode="decimal" value="8" autocomplete="off">
+
+    <div id="cashPlan" hidden>
+      <span class="lb" id="safetyT">Profil keamanan dana cash</span>
+      <div class="rr" role="radiogroup" aria-labelledby="safetyT">
+        <label><input type="radio" name="safety" value="30">Konservatif — sisakan 30%</label>
+        <label><input type="radio" name="safety" value="20" checked>Moderat — sisakan 20%</label>
+        <label><input type="radio" name="safety" value="12">Agresif — sisakan 12%</label>
+      </div>
+      <p class="p2">Pilih seberapa besar dana yang ingin Anda sisakan setelah pembelian untuk dana darurat, biaya transaksi, dan ruang negosiasi.</p>
+      <div class="insight">
+        <strong>Cara bacanya:</strong><br>
+        Jika dana siap pakai Anda Rp 1 miliar dan Anda memilih Moderat, maka batas harga yang lebih aman ada di sekitar Rp 800 juta. Sisa Rp 200 juta diperhitungkan untuk cadangan, biaya transaksi, dan ruang negosiasi.
+      </div>
+    </div>
+
     <div class="err" role="alert"></div>
     <button type="button" class="btn" data-next>Lanjut</button>
     <button type="button" class="back" data-back>Kembali</button>
@@ -352,44 +412,76 @@ footer p{margin-top:10px;line-height:1.65}
   </div>
 
   <div class="step" data-s="5" hidden>
-    <div class="report">
-      <div class="rp">
-        <div class="rhead"><div><small>Laporan Profil KPR</small><h3 id="resTitle">-</h3><p id="resMeta">-</p></div>
-          <div class="gauge"><svg viewBox="0 0 80 80" aria-hidden="true"><circle class="bg" cx="40" cy="40" r="34"/><circle class="fg" id="gArc" cx="40" cy="40" r="34" style="stroke-dashoffset:213.6"/></svg><b id="gNum">0</b></div></div>
-        <span class="badge" id="rBadge">-</span>
-        <p class="rdesc" id="rDesc"></p>
+    <div id="kprReport">
+      <div class="report">
+        <div class="rp">
+          <div class="rhead"><div><small>Laporan Profil KPR</small><h3 id="resTitle">-</h3><p id="resMeta">-</p></div>
+            <div class="gauge"><svg viewBox="0 0 80 80" aria-hidden="true"><circle class="bg" cx="40" cy="40" r="34"/><circle class="fg" id="gArc" cx="40" cy="40" r="34" style="stroke-dashoffset:213.6"/></svg><b id="gNum">0</b></div></div>
+          <span class="badge" id="rBadge">-</span>
+          <p class="rdesc" id="rDesc"></p>
+        </div>
+        <div class="rp"><div class="key"><small>Perkiraan harga rumah yang aman</small><b id="rHarga">-</b><span id="rRange">-</span></div></div>
+        <div class="rp"><div class="sh">Rincian perhitungan</div>
+          <div class="row"><span>Cicilan aman per bulan</span><b id="rCicilan">-</b></div>
+          <div class="row"><span>Cicilan maksimal per bulan</span><b id="rCicilanMaks">-</b></div>
+          <div class="row"><span>Perkiraan plafon pinjaman</span><b id="rPlafon">-</b></div>
+          <div class="row"><span>DP yang ada</span><b id="rDp">-</b></div>
+          <div class="row"><span>Tenor dan bunga</span><b id="rAsumsi">-</b></div></div>
+        <div class="rp"><div class="sh">Pembagian penghasilan bulanan</div>
+          <div class="stack"><i id="sK" style="background:var(--navy);width:0"></i><i id="sD" style="background:var(--gold);width:0"></i><i id="sF" style="background:var(--teal);width:0"></i></div>
+          <div class="legend">
+            <div><span style="--c:var(--navy)">Cicilan rumah</span><b id="pK">-</b></div>
+            <div><span style="--c:var(--gold)">Cicilan lain</span><b id="pD">-</b></div>
+            <div><span style="--c:var(--teal)">Sisa penghasilan</span><b id="pF">-</b></div></div></div>
+        <div class="rp"><div class="sh">Indikator kesiapan</div>
+          <div class="dim"><div class="l"><span>Beban utang saat ini</span><span id="d1n">-</span></div><div class="t"><i id="d1" style="width:0"></i></div></div>
+          <div class="dim"><div class="l"><span>Kesiapan DP</span><span id="d2n">-</span></div><div class="t"><i id="d2" style="width:0"></i></div></div>
+          <div class="dim"><div class="l"><span>Efisiensi bunga</span><span id="d3n">-</span></div><div class="t"><i id="d3" style="width:0"></i></div></div></div>
+        <div class="rp"><div class="sh">Catatan dan rekomendasi</div><ul class="notes" id="notes"></ul></div>
+        <div class="rfoot" id="rFoot">Perkiraan awal berdasarkan rumus anuitas. Bukan persetujuan KPR dan bukan saran keuangan.</div>
       </div>
-      <div class="rp"><div class="key"><small>Perkiraan harga rumah yang aman</small><b id="rHarga">-</b><span id="rRange">-</span></div></div>
-      <div class="rp"><div class="sh">Rincian perhitungan</div>
-        <div class="row"><span>Cicilan aman per bulan</span><b id="rCicilan">-</b></div>
-        <div class="row"><span>Cicilan maksimal per bulan</span><b id="rCicilanMaks">-</b></div>
-        <div class="row"><span>Perkiraan plafon pinjaman</span><b id="rPlafon">-</b></div>
-        <div class="row"><span>DP yang ada</span><b id="rDp">-</b></div>
-        <div class="row"><span>Tenor dan bunga</span><b id="rAsumsi">-</b></div></div>
-      <div class="rp"><div class="sh">Pembagian penghasilan bulanan</div>
-        <div class="stack"><i id="sK" style="background:var(--navy);width:0"></i><i id="sD" style="background:var(--gold);width:0"></i><i id="sF" style="background:var(--teal);width:0"></i></div>
-        <div class="legend">
-          <div><span style="--c:var(--navy)">Cicilan rumah</span><b id="pK">-</b></div>
-          <div><span style="--c:var(--gold)">Cicilan lain</span><b id="pD">-</b></div>
-          <div><span style="--c:var(--teal)">Sisa penghasilan</span><b id="pF">-</b></div></div></div>
-      <div class="rp"><div class="sh">Indikator kesiapan</div>
-        <div class="dim"><div class="l"><span>Beban utang saat ini</span><span id="d1n">-</span></div><div class="t"><i id="d1" style="width:0"></i></div></div>
-        <div class="dim"><div class="l"><span>Kesiapan DP</span><span id="d2n">-</span></div><div class="t"><i id="d2" style="width:0"></i></div></div>
-        <div class="dim"><div class="l"><span>Efisiensi bunga</span><span id="d3n">-</span></div><div class="t"><i id="d3" style="width:0"></i></div></div></div>
-      <div class="rp"><div class="sh">Catatan dan rekomendasi</div><ul class="notes" id="notes"></ul></div>
-      <div class="rfoot" id="rFoot">Perkiraan awal berdasarkan rumus anuitas. Bukan persetujuan KPR dan bukan saran keuangan.</div>
+      <div class="cons">
+        <p id="consText">Kami bantu mencarikan properti yang sesuai dengan budget Anda, lewat WhatsApp.</p>
+        <a class="btn teal" id="waBtn" href="#" target="_blank" rel="noopener">Cari properti sesuai budget via WhatsApp</a>
+      </div>
     </div>
-    <div class="cons">
-      <p id="consText">Kami bantu mencarikan properti yang sesuai dengan budget Anda, lewat WhatsApp.</p>
-      <a class="btn teal" id="waBtn" href="#" target="_blank" rel="noopener">Cari properti sesuai budget via WhatsApp</a>
+
+    <div id="cashReport" hidden>
+      <div class="report">
+        <div class="rp">
+          <div class="rhead"><div><small>Laporan Profil Pembeli Cash</small><h3 id="cResTitle">-</h3><p id="cResMeta">-</p></div>
+            <div class="gauge"><svg viewBox="0 0 80 80" aria-hidden="true"><circle class="bg" cx="40" cy="40" r="34"/><circle class="fg" id="cGArc" cx="40" cy="40" r="34" style="stroke-dashoffset:213.6"/></svg><b id="cGNum">0</b></div></div>
+          <span class="badge" id="cBadge">-</span>
+          <p class="rdesc" id="cDesc"></p>
+        </div>
+        <div class="rp"><div class="key"><small>Batas harga cash yang aman</small><b id="cHarga">-</b><span id="cRange">-</span></div></div>
+        <div class="rp"><div class="sh">Rincian perhitungan</div>
+          <div class="row"><span>Dana tunai siap pakai</span><b id="cDana">-</b></div>
+          <div class="row"><span>Profil keamanan</span><b id="cProfil">-</b></div>
+          <div class="row"><span>Dana yang disarankan disisakan</span><b id="cSisa">-</b></div>
+          <div class="row"><span>Batas harga cash yang aman</span><b id="cAman">-</b></div>
+          <div class="row"><span>Kisaran pencarian disarankan</span><b id="cCari">-</b></div>
+          <div class="row"><span>Penghasilan bulanan (opsional)</span><b id="cIncome">-</b></div>
+          <div class="row"><span>Kewajiban bulanan (opsional)</span><b id="cDebt">-</b></div>
+          <div class="row"><span>Tujuan membeli</span><b id="cGoal">-</b></div>
+          <div class="row"><span>Rencana beli</span><b id="cWhen">-</b></div>
+        </div>
+        <div class="rp"><div class="sh">Catatan dan rekomendasi</div><ul class="notes" id="cNotes"></ul></div>
+        <div class="rfoot">Perkiraan awal berdasarkan dana siap pakai dan profil keamanan yang Anda pilih. Bukan saran keuangan dan bukan jaminan harga properti.</div>
+      </div>
+      <div class="cons">
+        <p id="cConsText">Kami bantu mencarikan properti cash yang sesuai dengan budget Anda, lewat WhatsApp.</p>
+        <a class="btn teal" id="cWaBtn" href="#" target="_blank" rel="noopener">Minta 3 properti cash sesuai budget via WhatsApp</a>
+      </div>
     </div>
+
     <p class="status" id="saveStatus"></p>
     <button type="button" class="back" id="againBtn">Hitung ulang</button>
   </div>
 </div></section>
 
 <footer><div class="wrap"><b id="footName"></b><span id="footLic"></span>
-  <p><strong>Disclaimer:</strong> Kalkulator ini memberi perkiraan awal berdasarkan rumus anuitas dan asumsi yang Anda isi. Bukan persetujuan KPR, bukan penawaran pinjaman, dan bukan saran keuangan. Bunga dan syarat tiap bank dapat berbeda.</p></div></footer>
+  <p><strong>Disclaimer:</strong> Kalkulator ini memberi perkiraan awal berdasarkan asumsi yang Anda isi. Untuk KPR menggunakan rumus anuitas. Untuk cash menggunakan pendekatan dana siap pakai dan profil keamanan dana. Bukan persetujuan KPR, bukan penawaran pinjaman, dan bukan saran keuangan. Bunga, syarat bank, biaya transaksi, pajak, notaris, dan kondisi properti dapat berbeda-beda.</p></div></footer>
 </div>
 
 <script>
@@ -397,20 +489,19 @@ footer p{margin-top:10px;line-height:1.65}
 /* ====== KONFIGURASI: SUDAH DISINKRONISASI DENGAN BACKEND ====== */
 var CONFIG = {
   API_URL: 'https://script.google.com/macros/s/AKfycbz01DZlT7HdoidBXLPYqdcqge2K4JNNl64FDKMlL60pzscmnbIW4f9aVzpMFOw-Wrz2OA/exec',
-  APP_KEY: 'PropertyCode_JwWG02jf6RIgwPTkBAva', // Kunci Rahasia disuntikkan agar tidak ditolak server
+  APP_KEY: 'PropertyCode_JwWG02jf6RIgwPTkBAva',
   AGENT_NAME: 'Azrul',
   AGENT_TITLE: 'Konsultan Properti',
-  AGENT_WA: '6282143900864',          // format 62, tanpa + dan tanpa 0 di depan
-  AGENT_PHOTO: 'foto-agen.jpg',       // file foto di folder yang sama, atau URL gambar
-  AGENT_BIO: 'Membantu keluarga menemukan rumah dan KPR yang sesuai kemampuan.',
-  AGENT_FACTS: [],                    // isi hanya fakta nyata, contoh: ['8 tahun pengalaman']
+  AGENT_WA: '6282143900864',
+  AGENT_PHOTO: 'foto-agen.jpg',
+  AGENT_BIO: 'Membantu keluarga menemukan rumah, KPR, dan pembelian cash yang sesuai kemampuan.',
+  AGENT_FACTS: [],
   AGENT_LICENSE: '',
   TESTIMONIALS: [
     { text: 'Awalnya bingung mau beli rumah harga 400jt kuat apa nggak. Pas nyoba kalkulator ini baru paham batasan aman cicilanku. Makasih udah dibantu cari unit yang pas!', name: 'Nama Klien', info: 'Pembeli rumah pertama' }
   ]
 };
 
-// <calc>
 function calc(income, debt, dp, years, ratePct) {
   var DBR_AMAN = 0.30, DBR_MAKS = 0.35;
   var r = ratePct / 100 / 12;
@@ -429,42 +520,73 @@ function calc(income, debt, dp, years, ratePct) {
     hargaMaks: Math.round(plafonMaks + dp)
   };
 }
-// </calc>
 
 var $ = function (id) { return document.getElementById(id); };
 var digits = function (s) { return Number(String(s || '').replace(/[^\d]/g, '')) || 0; };
 var rupiah = function (n) { return 'Rp ' + Math.round(n).toLocaleString('id-ID'); };
 var clamp = function (x) { return Math.max(0, Math.min(1, x)); };
+
 function ringkas(n) {
   n = Math.floor(n / 5000000) * 5000000;
   if (n >= 1e9) return 'Rp ' + (n / 1e9).toLocaleString('id-ID', { maximumFractionDigits: 2 }) + ' miliar';
   return 'Rp ' + Math.round(n / 1e6).toLocaleString('id-ID') + ' juta';
 }
 
-/* ---------- profil agen ---------- */
-function initials(nm) { var p = String(nm).trim().split(/\s+/); return ((p[0] || '?').charAt(0) + (p[1] ? p[1].charAt(0) : '')).toUpperCase(); }
+function whenLabel(v) {
+  if (v === 'lt3') return 'Kurang dari 3 bulan';
+  if (v === 'mid') return '3 sampai 12 bulan';
+  return 'Lebih dari 12 bulan';
+}
+
+function initials(nm) {
+  var p = String(nm).trim().split(/\s+/);
+  return ((p[0] || '?').charAt(0) + (p[1] ? p[1].charAt(0) : '')).toUpperCase();
+}
+
 function setPhoto(box) {
   box.textContent = '';
-  var s = document.createElement('span'); s.className = 'ini'; s.textContent = initials(CONFIG.AGENT_NAME); box.appendChild(s);
+  var s = document.createElement('span');
+  s.className = 'ini';
+  s.textContent = initials(CONFIG.AGENT_NAME);
+  box.appendChild(s);
   if (!CONFIG.AGENT_PHOTO) return;
-  var img = new Image(); img.alt = 'Foto ' + CONFIG.AGENT_NAME;
+  var img = new Image();
+  img.alt = 'Foto ' + CONFIG.AGENT_NAME;
   img.onload = function () { box.textContent = ''; box.appendChild(img); };
   img.src = CONFIG.AGENT_PHOTO;
 }
+
 (function () {
   var nm = CONFIG.AGENT_NAME;
-  $('brand').textContent = nm; $('heroName').textContent = nm; $('heroRole').textContent = CONFIG.AGENT_TITLE;
-  $('aboutName').textContent = nm; $('aboutRole').textContent = CONFIG.AGENT_TITLE; $('aboutBio').textContent = CONFIG.AGENT_BIO;
-  $('aboutH').textContent = 'Kenali ' + nm; $('footName').textContent = nm + ', ' + CONFIG.AGENT_TITLE; $('footLic').textContent = CONFIG.AGENT_LICENSE;
+  $('brand').textContent = nm;
+  $('heroName').textContent = nm;
+  $('heroRole').textContent = CONFIG.AGENT_TITLE;
+  $('aboutName').textContent = nm;
+  $('aboutRole').textContent = CONFIG.AGENT_TITLE;
+  $('aboutBio').textContent = CONFIG.AGENT_BIO;
+  $('aboutH').textContent = 'Kenali ' + nm;
+  $('footName').textContent = nm + ', ' + CONFIG.AGENT_TITLE;
+  $('footLic').textContent = CONFIG.AGENT_LICENSE;
   $('consText').textContent = nm + ' siap membantu mencarikan properti yang sesuai dengan budget Anda, langsung lewat WhatsApp. Gratis dan tanpa kewajiban.';
-  CONFIG.AGENT_FACTS.forEach(function (t) { var li = document.createElement('li'); li.textContent = t; $('aboutFacts').appendChild(li); });
+  $('cConsText').textContent = nm + ' siap membantu mencarikan properti cash yang sesuai budget, dokumen jelas, dan siap proses.';
+
+  CONFIG.AGENT_FACTS.forEach(function (t) {
+    var li = document.createElement('li');
+    li.textContent = t;
+    $('aboutFacts').appendChild(li);
+  });
+
   if (CONFIG.TESTIMONIALS.length) {
     CONFIG.TESTIMONIALS.forEach(function (t) {
-      var c = document.createElement('div'); c.className = 'tcard';
-      var q = document.createElement('p'); q.textContent = t.text; c.appendChild(q);
+      var c = document.createElement('div');
+      c.className = 'tcard';
+      var q = document.createElement('p');
+      q.textContent = t.text;
+      c.appendChild(q);
       if (t.name) {
         var f = document.createElement('footer'), b = document.createElement('b');
-        b.textContent = t.name; f.appendChild(b);
+        b.textContent = t.name;
+        f.appendChild(b);
         if (t.info) f.appendChild(document.createTextNode(' · ' + t.info));
         c.appendChild(f);
       }
@@ -472,93 +594,255 @@ function setPhoto(box) {
     });
     $('testi').hidden = false;
   }
-  setPhoto($('heroPhoto')); setPhoto($('aboutPhoto'));
-  document.title = 'Kalkulator KPR ' + nm;
+
+  setPhoto($('heroPhoto'));
+  setPhoto($('aboutPhoto'));
+  document.title = 'Kalkulator Properti ' + nm;
 })();
 
 document.querySelectorAll('.m').forEach(function (el) {
-  el.addEventListener('input', function () { var v = digits(el.value); el.value = v ? v.toLocaleString('id-ID') : ''; });
+  el.addEventListener('input', function () {
+    var v = digits(el.value);
+    el.value = v ? v.toLocaleString('id-ID') : '';
+  });
 });
 
-/* ---------- alur ---------- */
 var TOTAL = 4, cur = 1, started = false;
 var LBL = ['Keuangan', 'Rencana', 'Tujuan', 'Kontak'];
-function checked(n) { return document.querySelector('input[name=' + n + ']:checked').value; }
-function clearErr() { document.querySelectorAll('.step .err').forEach(function (e) { e.textContent = ''; e.classList.remove('on'); }); }
-function fail(m) { var e = document.querySelector('.step:not([hidden]) .err'); e.textContent = m; e.classList.add('on'); }
-function show(n) {
-  cur = n; clearErr();
-  document.querySelectorAll('.step').forEach(function (s) {
-    var on = Number(s.getAttribute('data-s')) === n; s.hidden = !on;
-    if (on) { s.classList.remove('fade'); void s.offsetWidth; s.classList.add('fade'); }
-  });
-  $('prog').hidden = n > TOTAL;
-  if (n <= TOTAL) { $('ql').textContent = 'Langkah ' + n + ' dari ' + TOTAL; $('qn').textContent = LBL[n - 1]; $('pbf').style.width = (n / TOTAL * 100) + '%'; }
+
+function checked(name) {
+  var el = document.querySelector('input[name=' + name + ']:checked');
+  return el ? el.value : '';
 }
+
+function checkedOr(name, fallback) {
+  var v = checked(name);
+  return v === '' ? fallback : v;
+}
+
+function clearErr() {
+  document.querySelectorAll('.step .err').forEach(function (e) {
+    e.textContent = '';
+    e.classList.remove('on');
+  });
+}
+
+function fail(m) {
+  var e = document.querySelector('.step:not([hidden]) .err');
+  e.textContent = m;
+  e.classList.add('on');
+}
+
+function updateMethodUI() {
+  var method = checkedOr('method', 'kpr');
+  var isCash = method === 'cash';
+
+  if ($('kprFields')) $('kprFields').hidden = isCash;
+  if ($('cashFields')) $('cashFields').hidden = !isCash;
+  if ($('kprPlan')) $('kprPlan').hidden = isCash;
+  if ($('cashPlan')) $('cashPlan').hidden = !isCash;
+
+  if ($('s1Title')) {
+    $('s1Title').textContent = isCash
+      ? 'Berapa dana cash yang siap Anda pakai?'
+      : 'Berapa penghasilan dan cicilan Anda?';
+  }
+
+  if ($('s1Sub')) {
+    $('s1Sub').textContent = isCash
+      ? 'Digunakan untuk menghitung batas harga aman tanpa menguras likuiditas Anda.'
+      : 'Dipakai untuk menghitung cicilan yang masih nyaman tiap bulan.';
+  }
+
+  if ($('s2Title')) {
+    $('s2Title').textContent = isCash
+      ? 'Profil keamanan dana cash'
+      : 'DP dan tenor yang direncanakan';
+  }
+
+  if ($('s2Sub')) {
+    $('s2Sub').textContent = isCash
+      ? 'Pilih seberapa besar dana yang ingin Anda sisakan setelah pembelian.'
+      : 'Bunga adalah asumsi awal. Ubah untuk membandingkan.';
+  }
+
+  LBL[0] = isCash ? 'Dana cash' : 'Keuangan';
+  LBL[1] = isCash ? 'Keamanan dana' : 'Rencana';
+
+  if (cur <= TOTAL && $('qn')) {
+    $('qn').textContent = LBL[cur - 1];
+  }
+}
+
+function show(n) {
+  cur = n;
+  clearErr();
+  updateMethodUI();
+
+  document.querySelectorAll('.step').forEach(function (s) {
+    var on = Number(s.getAttribute('data-s')) === n;
+    s.hidden = !on;
+    if (on) {
+      s.classList.remove('fade');
+      void s.offsetWidth;
+      s.classList.add('fade');
+    }
+  });
+
+  $('prog').hidden = n > TOTAL;
+  if (n <= TOTAL) {
+    $('ql').textContent = 'Langkah ' + n + ' dari ' + TOTAL;
+    $('qn').textContent = LBL[n - 1];
+    $('pbf').style.width = (n / TOTAL * 100) + '%';
+  }
+}
+
 function collect() {
-  return { 
+  var method = checkedOr('method', 'kpr');
+  var isCash = method === 'cash';
+
+  return {
     action: "save_data",
-    nama: $('name').value.trim(), 
-    wa: $('phone').value.trim(), 
-    city: $('city').value.trim(), 
+    payment_method: method,
+    nama: $('name').value.trim(),
+    wa: $('phone').value.trim(),
+    city: $('city').value.trim(),
     goal: checked('goal'),
-    income: digits($('income').value), 
-    debt: digits($('debt').value), 
-    dp: digits($('dp').value), 
-    years: Number(checked('years')),
-    rate: Number(String($('rate').value).replace(',', '.')), 
-    when: checked('when'), 
-    consent: $('consent').checked, 
+    income: isCash ? digits($('cashIncome').value) : digits($('income').value),
+    debt: isCash ? digits($('cashDebt').value) : digits($('debt').value),
+    cash_funds: isCash ? digits($('cashFunds').value) : 0,
+    cash_income: isCash ? digits($('cashIncome').value) : 0,
+    cash_debt: isCash ? digits($('cashDebt').value) : 0,
+    safety: isCash ? Number(checkedOr('safety', 20)) : 0,
+    dp: isCash ? 0 : digits($('dp').value),
+    years: isCash ? 0 : Number(checkedOr('years', 20)),
+    rate: isCash ? 0 : Number(String($('rate').value).replace(',', '.')),
+    when: checked('when'),
+    consent: $('consent').checked,
     website: $('website').value,
-    k: CONFIG.APP_KEY, // APP_KEY disuntikkan
-    ref: "Website_KPR"
+    k: CONFIG.APP_KEY,
+    ref: isCash ? "Website_Cash" : "Website_KPR"
   };
 }
+
 function validate(n, d) {
-  if (n === 1 && d.income < 1000000) return 'Isi penghasilan bulanan, minimal Rp 1.000.000.';
-  if (n === 2 && !(d.rate >= 3 && d.rate <= 20)) return 'Bunga harus antara 3 dan 20 persen.';
+  if (d.method === 'cash') {
+    if (n === 1 && d.cash_funds < 10000000) {
+      return 'Isi dana tunai siap pakai, minimal Rp 10.000.000.';
+    }
+    if (n === 2 && !(d.safety === 30 || d.safety === 20 || d.safety === 12)) {
+      return 'Pilih profil keamanan dana.';
+    }
+  } else {
+    if (n === 1 && d.income < 1000000) {
+      return 'Isi penghasilan bulanan, minimal Rp 1.000.000.';
+    }
+    if (n === 2 && !(d.rate >= 3 && d.rate <= 20)) {
+      return 'Bunga harus antara 3 dan 20 persen.';
+    }
+  }
+
   if (n === 4) {
     if (d.nama.length < 2) return 'Isi nama Anda.';
-    if (!/^(\+?62|0)8\d{7,12}$/.test(d.wa.replace(/[\s-]/g, ''))) return 'Nomor WhatsApp belum benar. Contoh: 08123456789';
-    if (!d.consent) return 'Centang persetujuan agar agen boleh menghubungi Anda.';
+    if (!/^(\+?62|0)8\d{7,12}$/.test(d.wa.replace(/[\s-]/g, ''))) {
+      return 'Nomor WhatsApp belum benar. Contoh: 08123456789';
+    }
+    if (!d.consent) {
+      return 'Centang persetujuan agar agen boleh menghubungi Anda.';
+    }
   }
+
   return '';
 }
+
 function openTest() {
-  $('chs').hidden = false; $('stk').classList.remove('show');
-  if (!started) { started = true; show(1); }
+  $('chs').hidden = false;
+  $('stk').classList.remove('show');
+  if (!started) {
+    started = true;
+    show(1);
+  } else {
+    updateMethodUI();
+  }
   $('chs').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-function closeTest() { $('chs').hidden = true; $('stk').classList.add('show'); }
+
+function closeTest() {
+  $('chs').hidden = true;
+  $('stk').classList.add('show');
+}
+
 $('stkBtn').addEventListener('click', openTest);
 $('cx').addEventListener('click', closeTest);
-document.querySelectorAll('[data-next]').forEach(function (b) {
-  b.addEventListener('click', function () { var m = validate(cur, collect()); if (m) return fail(m); show(cur + 1); });
+
+document.querySelectorAll('input[name="method"]').forEach(function (input) {
+  input.addEventListener('change', updateMethodUI);
 });
-document.querySelectorAll('[data-back]').forEach(function (b) { b.addEventListener('click', function () { show(cur - 1); }); });
-document.querySelectorAll('.field').forEach(function (f) {
-  f.addEventListener('keydown', function (e) {
-    if (e.key !== 'Enter') return; e.preventDefault();
-    var b = document.querySelector('.step:not([hidden]) .btn'); if (b) b.click();
+
+document.querySelectorAll('[data-next]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var m = validate(cur, collect());
+    if (m) return fail(m);
+    show(cur + 1);
   });
 });
-$('finishBtn').addEventListener('click', function () {
-  var d = collect(), m = validate(4, d); if (m) return fail(m);
-  var r = calc(d.income, d.debt, d.dp, d.years, d.rate);
-  render(d, r); save(d);
-});
-$('againBtn').addEventListener('click', function () { show(1); $('chs').scrollIntoView({ behavior: 'smooth', block: 'start' }); });
 
-/* ---------- laporan ---------- */
+document.querySelectorAll('[data-back]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    show(cur - 1);
+  });
+});
+
+document.querySelectorAll('.field').forEach(function (f) {
+  f.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter') return;
+    e.preventDefault();
+    var b = document.querySelector('.step:not([hidden]) .btn');
+    if (b) b.click();
+  });
+});
+
+$('finishBtn').addEventListener('click', function () {
+  var d = collect();
+  var m = validate(4, d);
+  if (m) return fail(m);
+
+  if (d.method === 'cash') {
+    renderCash(d);
+    save(d);
+  } else {
+    var r = calc(d.income, d.debt, d.dp, d.years, d.rate);
+    render(d, r);
+    save(d);
+  }
+});
+
+$('againBtn').addEventListener('click', function () {
+  show(1);
+  $('chs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
 function level(s) {
   if (s >= 80) return ['Profil Sangat Siap', 'Kondisi keuangan Anda mendukung pengajuan KPR. Fokus berikutnya memilih unit dan bank.'];
   if (s >= 60) return ['Profil Siap', 'Penghasilan mendukung cicilan yang nyaman. Beberapa hal perlu dirapikan sebelum mengajukan.'];
   if (s >= 40) return ['Profil Berkembang', 'Anda sudah di jalur yang benar, tetapi DP atau beban utang perlu diperbaiki lebih dulu.'];
   return ['Perlu Persiapan', 'Sebaiknya perkuat DP dan kurangi cicilan lain sebelum mengajukan KPR.'];
 }
-function setBar(id, p) { $(id).style.width = p + '%'; }
+
+function cashLevel(s) {
+  if (s >= 80) return ['Siap Cash', 'Dana Anda relatif matang. Fokus berikutnya adalah memilih properti dengan dokumen bersih, harga wajar, dan proses yang tidak memakan waktu terlalu lama.'];
+  if (s >= 65) return ['Perlu Finalisasi Dana', 'Anda mendekati siap. Pastikan dana benar-benar liquid, biaya transaksi sudah diperhitungkan, dan Anda tidak memaksakan diri pada properti di atas batas aman.'];
+  return ['Perlu Perencanaan Ulang', 'Sebaiknya jangan buru-buru akad. Rapikan dulu dana darurat, kewajiban rutin, dan target harga agar keputusan membeli tidak mengganggu stabilitas keuangan Anda.'];
+}
+
+function setBar(id, p) {
+  $(id).style.width = p + '%';
+}
 
 function render(d, r) {
+  $('kprReport').hidden = false;
+  $('cashReport').hidden = true;
+
   var ok = r.hargaAman > 0, inc = d.income;
   var dpPct = ok ? d.dp / r.hargaAman * 100 : 0;
   var s1 = Math.round(clamp(1 - d.debt / (0.30 * inc)) * 100);
@@ -570,122 +854,300 @@ function render(d, r) {
   var lv = level(score);
 
   $('resTitle').textContent = 'Perkiraan untuk ' + d.nama;
-  $('resMeta').textContent = new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }) + (d.city ? ' · ' + d.city : '') + ' · ' + d.goal;
+  $('resMeta').textContent = new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }) +
+    (d.city ? ' · ' + d.city : '') +
+    ' · ' + d.goal +
+    ' · ' + whenLabel(d.when);
   $('gNum').textContent = score;
   $('gArc').style.strokeDashoffset = 213.6 * (1 - score / 100);
-  $('rBadge').textContent = lv[0]; $('rDesc').textContent = lv[1];
+  $('rBadge').textContent = lv[0];
+  $('rDesc').textContent = lv[1];
   $('rHarga').textContent = ok ? ringkas(r.hargaAman) : 'Belum memenuhi syarat';
   $('rRange').textContent = ok ? 'Kisaran sampai ' + ringkas(r.hargaMaks) : 'Lihat catatan di bawah';
-  $('rCicilan').textContent = rupiah(r.cicilanAman); $('rCicilanMaks').textContent = rupiah(r.cicilanMaks);
-  $('rPlafon').textContent = rupiah(r.plafonAman); $('rDp').textContent = rupiah(d.dp);
+  $('rCicilan').textContent = rupiah(r.cicilanAman);
+  $('rCicilanMaks').textContent = rupiah(r.cicilanMaks);
+  $('rPlafon').textContent = rupiah(r.plafonAman);
+  $('rDp').textContent = rupiah(d.dp);
   $('rAsumsi').textContent = d.years + ' tahun, ' + d.rate + '%';
 
-  var debt = Math.min(d.debt, inc), free = Math.max(0, inc - pmt - debt), tot = (pmt + debt + free) || 1;
-  var pK = Math.round(pmt / tot * 100), pD = Math.round(debt / tot * 100), pF = Math.max(0, 100 - pK - pD);
-  $('pK').textContent = pK + '% · ' + rupiah(pmt); $('pD').textContent = pD + '% · ' + rupiah(debt); $('pF').textContent = pF + '% · ' + rupiah(free);
-  setBar('sK', pK); setBar('sD', pD); setBar('sF', pF);
-  $('d1n').textContent = s1 + '/100'; $('d2n').textContent = s2 + '/100'; $('d3n').textContent = s3 + '/100';
-  setBar('d1', s1); setBar('d2', s2); setBar('d3', s3);
+  var debt = Math.min(d.debt, inc);
+  var free = Math.max(0, inc - pmt - debt);
+  var tot = (pmt + debt + free) || 1;
+  var pK = Math.round(pmt / tot * 100);
+  var pD = Math.round(debt / tot * 100);
+  var pF = Math.max(0, 100 - pK - pD);
+
+  $('pK').textContent = pK + '% · ' + rupiah(pmt);
+  $('pD').textContent = pD + '% · ' + rupiah(debt);
+  $('pF').textContent = pF + '% · ' + rupiah(free);
+  setBar('sK', pK);
+  setBar('sD', pD);
+  setBar('sF', pF);
+
+  $('d1n').textContent = s1 + '/100';
+  $('d2n').textContent = s2 + '/100';
+  $('d3n').textContent = s3 + '/100';
+  setBar('d1', s1);
+  setBar('d2', s2);
+  setBar('d3', s3);
 
   var notes = [];
-  if (r.cicilanAman === 0) notes.push(['Cicilan lain Anda sudah melewati batas aman. Bank biasanya menolak atau mengecilkan plafon. Melunasi sebagian utang lebih dulu akan membantu.', 0]);
-  else if (d.debt > 0) notes.push(['Cicilan lain memakai sebagian kapasitas. Melunasinya akan menaikkan harga rumah yang aman.', 0]);
-  if (ok && dpPct < 10) notes.push(['DP Anda sekitar ' + dpPct.toFixed(1).replace('.', ',') + '% dari harga. Banyak bank meminta DP minimal 10 sampai 20%, jadi siapkan dana tambahan.', 0]);
-  else if (ok && dpPct < 20) notes.push(['DP Anda sekitar ' + dpPct.toFixed(1).replace('.', ',') + '% dari harga. Menaikkannya ke 20% biasanya memperbesar peluang disetujui.', 0]);
-  else if (ok) notes.push(['DP Anda sekitar ' + dpPct.toFixed(1).replace('.', ',') + '% dari harga, sudah memadai untuk sebagian besar bank.', 1]);
-  if (d.years >= 25) notes.push(['Tenor panjang membuat cicilan lebih ringan, tetapi total bunga yang dibayar jauh lebih besar.', 0]);
-  else notes.push(['Tenor ' + d.years + ' tahun menjaga total bunga tetap terkendali.', 1]);
-  $('notes').textContent = '';
-  notes.forEach(function (t) { var li = document.createElement('li'); if (t[1]) li.className = 'ok'; li.textContent = t[0]; $('notes').appendChild(li); });
+  if (r.cicilanAman === 0) {
+    notes.push(['Cicilan lain Anda sudah melewati batas aman. Bank biasanya menolak atau mengecilkan plafon. Melunasi sebagian utang lebih dulu akan membantu.', 0]);
+  } else if (d.debt > 0) {
+    notes.push(['Cicilan lain memakai sebagian kapasitas. Melunasinya akan menaikkan harga rumah yang aman.', 0]);
+  }
 
-  var msg = 'Halo ' + CONFIG.AGENT_NAME + ', saya ' + d.nama + '. Saya baru memakai kalkulator KPR Anda.\n' +
-    'Profil: ' + lv[0] + ' (skor ' + score + ')\nPenghasilan: ' + rupiah(d.income) + '/bulan\nCicilan lain: ' + rupiah(d.debt) + '/bulan\nDP: ' + rupiah(d.dp) + '\n' +
+  if (ok && dpPct < 10) {
+    notes.push(['DP Anda sekitar ' + dpPct.toFixed(1).replace('.', ',') + '% dari harga. Banyak bank meminta DP minimal 10 sampai 20%, jadi siapkan dana tambahan.', 0]);
+  } else if (ok && dpPct < 20) {
+    notes.push(['DP Anda sekitar ' + dpPct.toFixed(1).replace('.', ',') + '% dari harga. Menaikkannya ke 20% biasanya memperbesar peluang disetujui.', 0]);
+  } else if (ok) {
+    notes.push(['DP Anda sekitar ' + dpPct.toFixed(1).replace('.', ',') + '% dari harga, sudah memadai untuk sebagian besar bank.', 1]);
+  }
+
+  if (d.years >= 25) {
+    notes.push(['Tenor panjang membuat cicilan lebih ringan, tetapi total bunga yang dibayar jauh lebih besar.', 0]);
+  } else {
+    notes.push(['Tenor ' + d.years + ' tahun menjaga total bunga tetap terkendali.', 1]);
+  }
+
+  $('notes').textContent = '';
+  notes.forEach(function (t) {
+    var li = document.createElement('li');
+    if (t[1]) li.className = 'ok';
+    li.textContent = t[0];
+    $('notes').appendChild(li);
+  });
+
+  var msg = 'Halo ' + CONFIG.AGENT_NAME + ', saya ' + d.nama + '. Saya baru memakai kalkulator properti Anda.\n' +
+    'Metode: KPR / Kredit\n' +
+    'Profil: ' + lv[0] + ' (skor ' + score + ')\n' +
+    'Penghasilan: ' + rupiah(d.income) + '/bulan\n' +
+    'Cicilan lain: ' + rupiah(d.debt) + '/bulan\n' +
+    'DP: ' + rupiah(d.dp) + '\n' +
     'Hasil: harga aman sekitar ' + ringkas(r.hargaAman) + ', cicilan aman ' + rupiah(r.cicilanAman) + '/bulan (' + d.years + ' tahun, ' + d.rate + '%).\n' +
-    (d.city ? 'Area diincar: ' + d.city + '\n' : '') + 'Mohon dibantu mencarikan properti yang sesuai dengan budget saya (sampai sekitar ' + (ok ? ringkas(r.hargaMaks) : 'budget di atas') + ').';
+    (d.city ? 'Area diincar: ' + d.city + '\n' : '') +
+    'Tujuan: ' + d.goal + '\n' +
+    'Rencana beli: ' + whenLabel(d.when) + '\n' +
+    'Mohon dibantu mencarikan properti yang sesuai dengan budget saya (sampai sekitar ' + (ok ? ringkas(r.hargaMaks) : 'budget di atas') + ').';
+
   $('waBtn').href = 'https://wa.me/' + CONFIG.AGENT_WA + '?text=' + encodeURIComponent(msg);
-  d.profile = lv[0]; d.score = score;
+  d.profile = lv[0];
+  d.score = score;
 
   show(5);
   $('chs').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// MODIFIKASI: Mode Debug (Membaca response text mentah untuk diagnosa error)
+function renderCash(d) {
+  $('kprReport').hidden = true;
+  $('cashReport').hidden = false;
+
+  var funds = d.cash_funds || 0;
+  var safety = Number(d.safety) || 20;
+  var reserve = Math.round(funds * safety / 100);
+  var safeMax = Math.round(funds - reserve);
+  var searchMin = Math.round(safeMax * 0.75);
+
+  var profileName = safety >= 30 ? 'Konservatif' : (safety <= 12 ? 'Agresif' : 'Moderat');
+
+  var score = 50;
+  if (safety >= 30) score += 25;
+  else if (safety >= 20) score += 15;
+  else score += 5;
+
+  if (d.cash_income > 0) score += 5;
+
+  if (d.cash_debt <= 0) {
+    score += 5;
+  } else if (d.cash_income > 0 && d.cash_debt / d.cash_income <= 0.3) {
+    score += 5;
+  }
+
+  if (d.when === 'lt3') score += 5;
+  else if (d.when === 'mid') score += 3;
+  else if (d.when === 'gt12') score -= 2;
+
+  score = Math.max(35, Math.min(95, Math.round(score)));
+  var lv = cashLevel(score);
+
+  $('cResTitle').textContent = 'Perkiraan untuk ' + d.nama;
+  $('cResMeta').textContent = new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }) +
+    (d.city ? ' · ' + d.city : '') +
+    ' · ' + d.goal +
+    ' · ' + whenLabel(d.when);
+  $('cGNum').textContent = score;
+  $('cGArc').style.strokeDashoffset = 213.6 * (1 - score / 100);
+  $('cBadge').textContent = lv[0];
+  $('cDesc').textContent = lv[1];
+
+  $('cHarga').textContent = ringkas(safeMax);
+  $('cRange').textContent = 'Kisaran pencarian ' + ringkas(searchMin) + ' – ' + ringkas(safeMax);
+
+  $('cDana').textContent = rupiah(funds);
+  $('cProfil').textContent = profileName + ' · sisakan ' + safety + '%';
+  $('cSisa').textContent = rupiah(reserve);
+  $('cAman').textContent = rupiah(safeMax);
+  $('cCari').textContent = ringkas(searchMin) + ' – ' + ringkas(safeMax);
+  $('cIncome').textContent = d.cash_income > 0 ? rupiah(d.cash_income) : '-';
+  $('cDebt').textContent = d.cash_debt > 0 ? rupiah(d.cash_debt) : '-';
+  $('cGoal').textContent = d.goal || '-';
+  $('cWhen').textContent = whenLabel(d.when);
+
+  var notes = [];
+
+  if (safety >= 30) {
+    notes.push('Profil konservatif memberi Anda bantalan yang kuat. Ini cocok jika Anda tidak ingin terganggu biaya tak terduga setelah akad.');
+  } else if (safety >= 20) {
+    notes.push('Profil moderat adalah titik seimbang. Pastikan 20% yang disisakan benar-benar tidak dipakai untuk membayar harga rumah.');
+  } else {
+    notes.push('Profil agresif hanya aman jika dana darurat Anda sudah terpisah di rekening lain dan tidak tersentuh oleh transaksi properti.');
+  }
+
+  if (d.cash_debt > 0) {
+    notes.push('Meskipun membeli cash, kewajiban bulanan tetap mengurangi fleksibilitas keuangan. Jika memungkinkan, lunasi atau kurangi sebelum akad.');
+  }
+
+  if (d.cash_income <= 0) {
+    notes.push('Anda melewatkan kolom penghasilan opsional. Mengisinya dapat membantu agen memahami profil keuangan Anda dengan lebih baik.');
+  }
+
+  if (d.when === 'lt3') {
+    notes.push('Karena rencana beli Anda cepat, siapkan KTP, KK, NPWP, dan bukti dana sejak sekarang agar proses tidak terhambat.');
+  }
+
+  notes.push('Gunakan kisaran pencarian sebagai batas rasional. Jangan mudah terpancing properti di atas angka aman hanya karena emosi atau tekanan waktu.');
+  notes.push('Beli cash tetap butuh batas. Tanpa batas, Anda mudah tergoda all-in dan kehilangan bantalan finansial setelah akad.');
+
+  $('cNotes').textContent = '';
+  notes.forEach(function (t) {
+    var li = document.createElement('li');
+    li.textContent = t;
+    $('cNotes').appendChild(li);
+  });
+
+  var msg = 'Halo ' + CONFIG.AGENT_NAME + ', saya ' + d.nama + '. Saya sudah menghitung budget cash aman saya.\n' +
+    'Metode: Cash / Tunai\n' +
+    'Dana siap pakai: ' + rupiah(funds) + '\n' +
+    'Profil keamanan: ' + profileName + ' (sisakan ' + safety + '%)\n' +
+    'Dana yang disarankan disisakan: ' + rupiah(reserve) + '\n' +
+    'Batas harga cash aman: ' + ringkas(safeMax) + '\n' +
+    'Kisaran pencarian: ' + ringkas(searchMin) + ' – ' + ringkas(safeMax) + '\n' +
+    'Skor: ' + score + ' (' + lv[0] + ')\n' +
+    (d.city ? 'Area diincar: ' + d.city + '\n' : '') +
+    'Tujuan: ' + d.goal + '\n' +
+    'Rencana beli: ' + whenLabel(d.when) + '\n' +
+    'Mohon dibantu carikan 3 properti yang sesuai budget, dokumen jelas, dan siap proses.';
+
+  $('cWaBtn').href = 'https://wa.me/' + CONFIG.AGENT_WA + '?text=' + encodeURIComponent(msg);
+
+  d.profile = lv[0];
+  d.score = score;
+
+  show(5);
+  $('chs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 function save(data) {
   var st = $('saveStatus');
-  if (CONFIG.API_URL.indexOf('GANTI_') === 0) { st.textContent = 'Mode demo: belum tersambung ke Google Sheets.'; return; }
-  st.textContent = 'Menyimpan data dan membuat laporan AI...';
-  
-  fetch(CONFIG.API_URL, { 
-    method: 'POST', 
-    headers: { 'Content-Type': 'text/plain;charset=utf-8' }, 
+  if (CONFIG.API_URL.indexOf('GANTI_') === 0) {
+    st.textContent = 'Mode demo: belum tersambung ke Google Sheets.';
+    return;
+  }
+
+  st.textContent = 'Menyimpan data dan membuat laporan...';
+
+  fetch(CONFIG.API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify(data),
-    redirect: 'follow' 
+    redirect: 'follow'
   })
-  .then(function (r) { 
-    return r.text().then(function(txt) {
+  .then(function (r) {
+    return r.text().then(function (txt) {
       console.log('🔴 RAW APPS SCRIPT RESPONSE:', txt);
       try {
         return JSON.parse(txt);
-      } catch(e) {
+      } catch (e) {
         throw new Error('Respon bukan JSON: ' + txt.substring(0, 100));
       }
     });
   })
-  .then(function (j) { 
+  .then(function (j) {
     console.log('🟢 PARSED JSON:', j);
     if (j.status === "saved" || j.status === "triggered" || j.status === "already_sent" || j.status === "rate_limited") {
-      st.textContent = j.message || 'Data tersimpan. Silakan klik tombol WhatsApp di bawah.'; 
+      st.textContent = j.message || 'Data tersimpan. Silakan klik tombol WhatsApp di bawah.';
     } else {
-      st.textContent = j.message || 'Data belum tersimpan. Silakan coba lagi.'; 
+      st.textContent = j.message || 'Data belum tersimpan. Silakan coba lagi.';
     }
   })
-  .catch(function (err) { 
+  .catch(function (err) {
     console.error('🔴 FETCH ERROR:', err);
-    st.textContent = 'Koneksi bermasalah. Cek Console (F12) untuk detail error.'; 
+    st.textContent = 'Koneksi bermasalah. Cek Console (F12) untuk detail error.';
   });
 }
 
-// Trigger Tahap 2: Kirim Laporan via Fonnte saat user klik tombol WA
-$('waBtn').addEventListener('click', function(e) {
-  e.preventDefault(); 
-  var d = collect();
-  var triggerPayload = {
-    action: "trigger_send_report",
-    nama: d.nama,
-    wa: d.wa,
-    k: CONFIG.APP_KEY
-  };
-  
-  var st = $('saveStatus');
-  st.textContent = 'Mengirim laporan ke WhatsApp Anda...';
-  
-  fetch(CONFIG.API_URL, { 
-    method: 'POST', 
-    headers: { 'Content-Type': 'text/plain;charset=utf-8' }, 
-    body: JSON.stringify(triggerPayload),
-    redirect: 'follow'
-  })
-  .then(function(r) { 
-    return r.text().then(function(txt) {
-      console.log('🔴 RAW TRIGGER RESPONSE:', txt);
-      return JSON.parse(txt);
-    });
-  })
-  .then(function(j) {
-    console.log('🟢 TRIGGER JSON:', j);
-    st.textContent = j.message || 'Laporan diproses.';
-  })
-  .catch(function(err) {
-    console.error('🔴 TRIGGER ERROR:', err);
-    st.textContent = 'Gagal memicu pengiriman, namun link WhatsApp tetap dibuka.';
-  })
-  .finally(function() {
-    window.open($('waBtn').href, '_blank');
-  });
-});
+function bindWaTrigger(btn) {
+  if (!btn) return;
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    var d = collect();
+    var triggerPayload = {
+      action: "trigger_send_report",
+      payment_method: d.method,
+      nama: d.nama,
+      wa: d.wa,
+      k: CONFIG.APP_KEY
+    };
 
+    var st = $('saveStatus');
+    st.textContent = 'Mengirim laporan ke WhatsApp Anda...';
+
+    fetch(CONFIG.API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(triggerPayload),
+      redirect: 'follow'
+    })
+    .then(function (r) {
+      return r.text().then(function (txt) {
+        console.log('🔴 RAW TRIGGER RESPONSE:', txt);
+        return JSON.parse(txt);
+      });
+    })
+    .then(function (j) {
+      console.log('🟢 TRIGGER JSON:', j);
+      st.textContent = j.message || 'Laporan diproses.';
+    })
+    .catch(function (err) {
+      console.error('🔴 TRIGGER ERROR:', err);
+      st.textContent = 'Gagal memicu pengiriman, namun link WhatsApp tetap dibuka.';
+    })
+    .finally(function () {
+      window.open(btn.href, '_blank');
+    });
+  });
+}
+
+bindWaTrigger($('waBtn'));
+bindWaTrigger($('cWaBtn'));
+
+updateMethodUI();
 $('stk').classList.add('show');
 })();
 </script>
 </body>
 </html>
+
+
+              <script>
+                                 AGENT_WA: '6282143900864'
+   
+   AGENT_PHOTO: 'foto-agen.jpg'
+   
+
+              </script>
+                        </body>
+                        </html>
+                    
